@@ -2,7 +2,7 @@ name: Check ticket price
 
 on:
   schedule:
-    - cron: "2/5 * * * *"
+    - cron: "0 * * * *"
 
 jobs:
   check:
