@@ -2,7 +2,7 @@ name: Check ticket price
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "1/5 * * * *"
   workflow_dispatch:
 
 jobs:
