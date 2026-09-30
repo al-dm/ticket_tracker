@@ -1,29 +1,13 @@
-name: Check ticket price
+name: Schedule test
 
 on:
   schedule:
-    - cron: "1/5 * * * *"
+    - cron: '3/5 * * * *'
   workflow_dispatch:
 
 jobs:
-  check:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.14"
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Check ticket price
-        env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          CHAT_ID: ${{ secrets.CHAT_ID }}
-          URL: ${{ secrets.URL }}
-        run: python check.py
+      - run: echo "SCHEDULE WORKS"
