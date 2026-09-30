@@ -7,7 +7,7 @@ BOT_TOKEN = os.environ["BOT_TOKEN"]
 CHAT_ID = os.environ["CHAT_ID"]
 
 URL = os.environ["URL"]
-LIMIT = 8000
+LIMIT = 9000
 
 
 
