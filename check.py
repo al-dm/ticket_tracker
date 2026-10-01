@@ -7,7 +7,7 @@ BOT_TOKEN = os.environ["BOT_TOKEN"]
 CHAT_ID = os.environ["CHAT_ID"]
 
 URL = os.environ["URL"]
-LIMIT = 9000
+LIMIT = 8000
 
 
 
@@ -53,7 +53,7 @@ print("Текущая цена:", price)
 
 if price is not None and price < LIMIT:
     send_telegram(
-        f"🎫 Цена упала!\n"
+        f"❗❗❗❗❗ Цена упала! ❗❗❗❗❗\n"
         f"Сейчас: {price:.0f} ₽\n"
         f"{URL}"
     )
@@ -64,4 +64,9 @@ if price is not None and price > LIMIT:
         f"🎫 Цена выросла!\n"
         f"Сейчас: {price:.0f} ₽\n"
         f"{URL}"
+    )
+if price is not None and price == LIMIT:
+    send_telegram(
+        f"как обычно."
+        f"Сейчас: {price:.0f} ₽\n"
     )
